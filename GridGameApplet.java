@@ -88,6 +88,7 @@ public class GridGameApplet extends Applet implements KeyListener, Runnable {
                     Point prev = undoStack.pop();
                     playerX = prev.x;
                     playerY = prev.y;
+                    board[playerX][playerY] = 0; // Clear any item at new position
                 }
                 break;
         }

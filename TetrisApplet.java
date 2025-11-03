@@ -35,7 +35,7 @@ public class TetrisApplet extends Applet implements KeyListener, Runnable {
     public void run() {
         while (true) {
             try { Thread.sleep(600); } catch (Exception e) {}
-            moveDown();
+            moveDown(); //disminuye y repite las figuras
             repaint();
         }
     }
@@ -135,7 +135,7 @@ public class TetrisApplet extends Applet implements KeyListener, Runnable {
         repaint();
     }
 
-    void rotatePiece() {
+    void rotatePiece() { //trasnpuesta de las figuras
         // simple rotation by rotating matrix
         int[][] p = getPiece();
         int R = p.length, C = p[0].length;
